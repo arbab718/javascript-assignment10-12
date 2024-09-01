@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let subject1 = parseFloat(prompt("Enter marks obtained in Subject 1:"))
+      let subject2 = parseFloat(prompt("Enter marks obtained in Subject 2:"))
+      let subject3 = parseFloat(prompt("Enter marks obtained in Subject 3:"))
+
+      let totalMarks = parseFloat(
+        prompt("Enter total marks for all subjects:")
+      )
+
+      let marksObtained = subject1 + subject2 + subject3
+      let percentage = (marksObtained / totalMarks) * 100
+
+      let grade, remarks;
+
+      if (percentage >= 80) {
+        grade = "A one";
+        remarks = "Excellent";
+      } else if (percentage >= 70) {
+        grade = "A";
+        remarks = "Good";
+      } else if (percentage >= 60) {
+        grade = "B";
+        remarks = "You need to improve";
+      } else {
+        grade = "Fail";
+        remarks = "";
+      }
+
+      document.write("<h2>Marks Sheet</h2>")
+      document.write("Total Marks: " + totalMarks + "<br>")
+      document.write("Marks Obtained: " + marksObtained + "<br>")
+      document.write("Percentage: " + percentage.toFixed(2) + "%<br>")
+      document.write("Grade: " + grade + "<br>")
+      document.write("Remarks: " + remarks + "<br>")
+    </script>
+  </head>
+  <body></body>
+</html>
